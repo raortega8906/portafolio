@@ -34,7 +34,7 @@
     <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 
     {{-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --}}
-    {{-- WARNING: Respond.js doesn't work if you view the page via file://   
+    {{-- WARNING: Respond.js doesn't work if you view the page via file://
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -61,11 +61,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#tf-home">Portada</a></li>
-                        <li><a href="#tf-service">Habilidades</a></li>
-                        <li><a href="#tf-portfolio">Portfolio</a></li>
-                        <li><a href="#tf-about">Acerca De</a></li>
-                        <li><a href="#tf-contact">Contacto</a></li>
+                        <li><a href="/#tf-home">Portada</a></li>
+                        <li><a href="/#tf-service">Habilidades</a></li>
+                        <li><a href="/#tf-portfolio">Portfolio</a></li>
+                        <li><a href="/#tf-about">Acerca De</a></li>
+                        <li><a href="/#tf-contact">Contacto</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -90,7 +90,9 @@
 
             <div class="media">
                 <div class="col-md-4 media-left media-middle">
-                    <img src="images/{{ $project->image }}" class="img-responsive">
+                <a href="/images/{{ $project->image }}">
+                    <img src="/images/{{ $project->image }}" class="img-responsive">
+                </a>
                 </div>
                 <br>
                 <div class="media-body">

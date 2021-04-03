@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class PortafolioController extends Controller
 {
-    //
     public function index()
     {
         $projects = Project::orderBy('id', 'desc')->paginate(10);

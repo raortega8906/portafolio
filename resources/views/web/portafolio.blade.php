@@ -34,7 +34,7 @@
     <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 
     {{-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --}}
-    {{-- WARNING: Respond.js doesn't work if you view the page via file://   
+    {{-- WARNING: Respond.js doesn't work if you view the page via file://
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -113,7 +113,7 @@
                         plataforma de fichajes con Laravel 6, PHP, HTML, CSS3, MySQL y Boopstrap 3.
                     </p>
                     <p>
-                        Colaboración en proyecto PCsilos para el control de pesos de los silos de las granjas. 
+                        Colaboración en proyecto PCsilos para el control de pesos de los silos de las granjas.
                         Desarrollo de tareas con Laravel 6, PHP, Python y MySQL.
                     </p>
                 </div>
@@ -153,12 +153,12 @@
         <div class="row toppadding">
             @foreach ($projects as $project)
                 <div class="col-md-4">
-                    <h4 class="media-heading">{{ $project->title }}</h2> 
+                    <h4 class="media-heading">{{ $project->title }}</h4>
                     <a href="{{ route('portafolio.show', $project) }}">
-                        <img src="images/{{ $project->image }}" class="img-responsive">                 
-                    </a>     
+                        <img src="/images/{{ $project->image }}" class="img-responsive">
+                    </a>
                     <br>
-                    <br>     
+                    <br>
                 </div>
             @endforeach
         </div>
@@ -183,8 +183,8 @@
                         PHP con su framework Laravel.
                     </p>
                     <p>
-                        Las características de adaptabilidad al trabajp y las necesidadesde la Empresa, así como el interés 
-                        del trabajo en equipo nos hace conciderarnos un candidato en favor de la misma, ofreciéndole nuestro 
+                        Las características de adaptabilidad al trabajp y las necesidadesde la Empresa, así como el interés
+                        del trabajo en equipo nos hace conciderarnos un candidato en favor de la misma, ofreciéndole nuestro
                         crecimiento profesional y el aprendizaje diario en beneficio de su mercado.
                     </p>
                     <br>
@@ -212,7 +212,7 @@
                                 <li>Python</li>
                             </ul>
                         </li>
-                        </br>
+                        <br>
                         <li>
                             <h4>Frameworks</h4>
                             <ul>
@@ -220,14 +220,14 @@
                                 <li>Bootstrap</li>
                             </ul>
                         </li>
-                        </br>
+                        <br>
                         <li>
                             <h4>Base de Datos</h4>
                             <ul>
                                 <li>MySQL</li>
                             </ul>
                         </li>
-                        </br>
+                        <br>
                         <li>
                             <h4>Metodologías Ágiles</h4>
                             <ul>

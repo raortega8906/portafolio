@@ -24,7 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Ruta principal
 Route::get('/', [\App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.index');
-Route::get('/{project}', [\App\Http\Controllers\PortafolioController::class, 'show'])->name('portafolio.show');
+Route::get('/work/{project}', [\App\Http\Controllers\PortafolioController::class, 'show'])->name('portafolio.show');
 
 // Ruta envio mails
 Route::post('/mail', [\App\Http\Controllers\MailController::class, 'getMail'])->name('mail');
@@ -43,11 +43,3 @@ Route::middleware('auth')->group(function () {
     Route::delete('/project/{project}', [App\Http\Controllers\ProjectController::class, 'destroy'])->name('project.destroy');
 });
 
-// RUTAS DESHECHAS:
-// Route::get('/', function () {
-//     return view('web.portafolio');
-// });
-// Route::get('/work', function() {
-//     //
-//     return view('web.work');
-// });
