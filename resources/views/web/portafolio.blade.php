@@ -151,7 +151,7 @@
         <div class="space"></div>
 
         <div class="row toppadding">
-            @foreach ($projects as $project)
+            {{--  @foreach ($projects as $project)
                 <div class="col-md-4">
                     <h4 class="media-heading">{{ $project->title }}</h4>
                     <a href="{{ route('portafolio.show', $project) }}">
@@ -160,7 +160,7 @@
                     <br>
                     <br>
                 </div>
-            @endforeach
+            @endforeach  --}}
         </div>
 
     </div>
