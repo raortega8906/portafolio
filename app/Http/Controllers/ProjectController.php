@@ -21,14 +21,14 @@ class ProjectController extends Controller
 
     public function create(Request $request)
     {
-        $validateData = [
-            'title' => $request->input('title'),
-            'url_clean' => $request->input('url_clean'),
-            'image' => $request->file('image'),
-            'content' => $request->input('content')
-        ];
         if($request->hasFile('image'))
         {
+            $validateData = [
+                'title' => $request->input('title'),
+                'url_clean' => $request->input('url_clean'),
+                'image' => $request->file('image'),
+                'content' => $request->input('content')
+            ];
             $destinationPath = 'images';
             $file = $request->file('image');
             $file_name = $file->getClientOriginalName();
@@ -37,7 +37,7 @@ class ProjectController extends Controller
             Project::create($validateData);
             return back()->with('status', 'Proyecto creado con éxito');
         }
-        return back()->with('status-error', 'Alguno de los campos está sin llenar');
+        return back()->with('status-error', 'Faltan campos por llenar');
     }
 
     public function show(Project $project)
@@ -52,22 +52,23 @@ class ProjectController extends Controller
 
     public function update(Request $request, Project $project)
     {
-        $validateData = [
-            'title' => $request->input('title'),
-            'url_clean' => $request->input('url_clean'),
-            'image' => $request->file('image'),
-            'content' => $request->input('content')
-        ];
         if($request->hasFile('image'))
         {
+            $validateData = [
+                'title' => $request->input('title'),
+                'url_clean' => $request->input('url_clean'),
+                'image' => $request->file('image'),
+                'content' => $request->input('content')
+            ];
             $destinationPath = 'images';
             $file = $request->file('image');
             $file_name = $file->getClientOriginalName();
             $file->move($destinationPath , $file_name);
             $validateData['image'] = $file_name;
             $project->update($validateData);
+            return back()->with('status', 'Proyecto actualizado con éxito');
         }
-        return back()->with('status', 'Proyecto actualizado con éxito');
+        return back()->with('status-error', 'Campos actualizados incorrectamente');
     }
 
     public function destroy(Project $project)

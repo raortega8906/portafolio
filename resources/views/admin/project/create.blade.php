@@ -23,7 +23,9 @@
     </div>
     <!-- /.content-header -->
 
+    @include('admin.partials.validation-error')
     @include('admin.partials.session-flash-status')
+    
 
     <div class="col-md-12">
       <!-- general form elements -->

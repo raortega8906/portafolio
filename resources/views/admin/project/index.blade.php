@@ -27,7 +27,7 @@
       Crear
     </a>
 
-    @include('admin.partials.session-flash-status-error')
+    @include('admin.partials.session-flash-status')
 
     <!-- Main content -->
         <div class="content">
@@ -61,7 +61,7 @@
                                         <tr>
                                             <td>{{ $project->title  }}</td>
                                             <td>{{ $project->url_clean }}</td>
-                                            <td><img src="images/{{ $project->image  }}" width="150" /></td>
+                                            <td><img src="/images/{{ $project->image  }}" width="150" /></td>
                                             <td>{{ $project->content }}</td>
                                             <td class="float-right">
                                                 <a class="btn btn-primary btn-sm"
