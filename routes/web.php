@@ -30,7 +30,7 @@ Route::get('/', [\App\Http\Controllers\PortafolioController::class, 'index'])->n
 Route::get('/work/{project}', [\App\Http\Controllers\PortafolioController::class, 'show'])->name('portafolio.show');
 
 // Ruta envio mails
-Route::post('https://rafaelortegaweb.herokuapp.com/mail', [\App\Http\Controllers\MailController::class, 'getMail'])->name('mail');
+Route::post('/mail', [\App\Http\Controllers\MailController::class, 'getMail'])->name('mail');
 
 // Ruta de administracion de proyectos
 Route::middleware('auth')->group(function () {
