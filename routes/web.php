@@ -20,11 +20,10 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
-Route::get('/register', function () {
-    return view('auth.login');
-});
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Ruta Eliminar Register
+// Route::get('/register', function () {
+//     return view('auth.login');
+// });
 
 // Ruta principal
 Route::get('/', [\App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.index');
@@ -47,3 +46,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/project/{project}', [App\Http\Controllers\ProjectController::class, 'destroy'])->name('project.destroy');
 });
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
