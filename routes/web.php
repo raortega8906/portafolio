@@ -20,6 +20,10 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
+Route::get('/register', function () {
+    return view('auth.login');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Ruta principal
