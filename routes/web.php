@@ -21,9 +21,9 @@ Route::get('/admin', function () {
 });
 
 // Ruta para quitar el Register en produccion... Habilitarla en desarrollo
-Route::get('/register', function () {
-    return view('auth.login');
-});
+// Route::get('/register', function () {
+//     return view('auth.login');
+// });
 
 // Ruta principal
 Route::get('/', [\App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.index');
