@@ -96,7 +96,7 @@
                 </div>
                 <br>
                 <div class="media-body">
-                    <h4 class="media-heading">Contenido</h4>
+                    <h4 class="media-heading">Contenido:</h4>
                     <p>
                         {!! $project->content !!}
                     </p>
