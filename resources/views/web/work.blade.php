@@ -98,7 +98,7 @@
                 <div class="media-body">
                     <h4 class="media-heading">Contenido</h4>
                     <p>
-                        {{ $project->content }}
+                        {!! $project->content !!}
                     </p>
                 </div>
             </div>

@@ -70,7 +70,7 @@ return [
             ]) : [],
         ],
 
-        // HEROKU
+        // HEROKU: Deshabilitar para desarrollo.
         'mysql' => [
             'driver' => 'mysql',
             'host' => $host,
