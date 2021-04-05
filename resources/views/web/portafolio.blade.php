@@ -176,7 +176,7 @@
                     <p>
                         Graduado de Ingeniería Informática en la Universidad de las Ciencias Informáticas (UCi), en La
                         Habana, Cuba. Cursando un Master MBA - Administración de Empresas en EUDE Business School, en
-                        Madrid.
+                        Madrid, España.
                     </p>
                     <p>
                         Actualmente me desempeño como desarrollador web, específicamente en el lenguaje de programación
@@ -226,6 +226,7 @@
                             <h4>Base de Datos</h4>
                             <ul>
                                 <li>MySQL</li>
+                                <li>PostgreSQL</li>
                             </ul>
                         </li>
                         <br>
@@ -246,7 +247,7 @@
 <div id="tf-contact">
     <div class="container">
         <div class="section-title">
-            <h3>Contactos</h3>
+            <h3>Mi información de contacto</h3>
             <p>Teléfono: +34 633 19 33 11</p>
             <p>Email: raortega8906@gmail.com</p>
             <p>Puede contactar conmigo como prefiera, directamente por teléfono o email, o llenando el formulario de
