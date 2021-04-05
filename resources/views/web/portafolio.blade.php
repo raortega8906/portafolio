@@ -171,7 +171,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-6">
-                    <h3>Alcance Profecional</h3>
+                    <h3>Alcance Profesional</h3>
                     <br>
                     <p>
                         Graduado de Ingeniería Informática en la Universidad de las Ciencias Informáticas (UCi), en La
