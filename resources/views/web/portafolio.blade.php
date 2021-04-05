@@ -184,7 +184,7 @@
                     </p>
                     <p>
                         Las características de adaptabilidad al trabajp y las necesidadesde la Empresa, así como el interés
-                        del trabajo en equipo nos hace conciderarnos un candidato en favor de la misma, ofreciéndole nuestro
+                        del trabajo en equipo nos hace considerarnos un candidato en favor de la misma, ofreciéndole nuestro
                         crecimiento profesional y el aprendizaje diario en beneficio de su mercado.
                     </p>
                     <br>
