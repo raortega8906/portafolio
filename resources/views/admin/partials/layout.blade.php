@@ -166,6 +166,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 
+<!-- CKeditor -->
+<script src="{{ asset("js/app.js") }}"></script>
 <!-- jQuery -->
 <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
