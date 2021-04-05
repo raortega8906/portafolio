@@ -183,9 +183,10 @@
                         PHP con su framework Laravel.
                     </p>
                     <p>
-                        Las características de adaptabilidad al trabajp y las necesidadesde la Empresa, así como el interés
-                        del trabajo en equipo nos hace considerarnos un candidato en favor de la misma, ofreciéndole nuestro
-                        crecimiento profesional y el aprendizaje diario en beneficio de su mercado.
+                        A lo largo de mi formación he potenciado la adaptabilidad a las necesidades de la empresa, 
+                        así como el espíritu de trabajo en equipo e implicación en las tareas. Estas capacidades hacen 
+                        considerarme un candidato en favor de la empresa, ofreciendo mi crecimiento profesional 
+                        y el aprendizaje diario en beneficio de su mercado.
                     </p>
                     <br>
                     <a href="#tf-why-me" class="btn btn-primary my-btn dark">Habilidades</a>
