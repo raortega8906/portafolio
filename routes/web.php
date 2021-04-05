@@ -20,10 +20,10 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
-// Ruta Eliminar Register
-Route::get('/register', function () {
-    return view('auth.login');
-});
+// Ruta para quitar el Register en produccion... Habilitarla en desarrollo
+// Route::get('/register', function () {
+//     return view('auth.login');
+// });
 
 // Ruta principal
 Route::get('/', [\App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.index');
