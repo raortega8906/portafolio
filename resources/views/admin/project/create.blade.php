@@ -23,9 +23,7 @@
     </div>
     <!-- /.content-header -->
 
-    @include('admin.partials.validation-error')
     @include('admin.partials.session-flash-status')
-    
 
     <div class="col-md-12">
       <!-- general form elements -->
@@ -40,8 +38,6 @@
         </div>
         <!-- /.card-header -->
 
-        @include('admin.partials.validation-error')
-
         <!-- form start -->
         <form role="form" action="{{ route('project.create') }}" method="POST" enctype="multipart/form-data">
           @csrf
@@ -49,30 +45,18 @@
             <div class="form-group">
               <label for="title">Titulo</label>
               <input type="text" class="form-control" name="title" id="title" placeholder="Enter title">
-              @error('title')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
             <div class="form-group">
               <label for="url_clean">Url</label>
               <input type="text" class="form-control" name="url_clean" id="url_clean" placeholder="Enter url">
-              @error('url_clean')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
             <div class="form-group">
               <label for="image">Imagen</label>
               <input type="file" class="form-control" name="image" id="image">
-              @error('image')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
             <div class="form-group">
               <label for="content">Contenido</label>
               <textarea type="text" class="form-control" name="content" id="content" rows="4" placeholder="Enter content"></textarea>
-              @error('content')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
           </div>
           <!-- /.card-body -->

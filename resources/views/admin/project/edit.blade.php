@@ -45,30 +45,18 @@
             <div class="form-group">
               <label for="title">Titulo</label>
               <input type="text" class="form-control" name="title" id="title" value="{{ old('title', $project->title) }}">
-              @error('title')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
             <div class="form-group">
               <label for="url_clean">Url</label>
               <input type="text" class="form-control" name="url_clean" id="url_clean" value="{{ old('url_clean', $project->url_clean) }}">
-              @error('url_clean')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
             <div class="form-group">
               <label for="image">Imagen</label>
               <input type="file" class="form-control" name="image" id="image" value="{{ old('image', $project->image) }}">
-              @error('image')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
             <div class="form-group">
               <label for="content">Contenido</label>
               <textarea type="text" class="form-control" name="content" id="content" rows="4">{{ old('content', $project->content) }}</textarea>
-              @error('content')
-                <small class="text-danger">{{ $message }}</small>
-              @enderror
             </div>
           </div>
           <!-- /.card-body -->
