@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\PortafolioController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,35 +18,40 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 // Ruta Login
 Route::get('/admin', function () {
     return view('auth.login');
 });
 
 // Ruta para quitar el Register en produccion... Deshabilitarla en desarrollo
-Route::get('/register', function () {
-    return view('auth.login');
-});
+// Route::get('/register', function () {
+//     return view('auth.login');
+// });
 
 // Ruta principal
-Route::get('/', [\App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.index');
-Route::get('/work/{project}', [\App\Http\Controllers\PortafolioController::class, 'show'])->name('portafolio.show');
+Route::get('/', [PortafolioController::class, 'index'])->name('portafolio.index');
+Route::get('/work/{project}', [PortafolioController::class, 'show'])->name('portafolio.show');
 
 // Ruta envio mails
-Route::post('/mail', [\App\Http\Controllers\MailController::class, 'getMail'])->name('mail');
+Route::post('/mail', [MailController::class, 'getMail'])->name('mail');
 
 // Ruta de administracion de proyectos
-Route::middleware('auth')->group(function () {
+Route::group(['middleware' => 'auth'], function() {
 
-    Route::get('/project', [\App\Http\Controllers\ProjectController::class, 'index'])->name('project.index');
-    Route::get('/project/create', function () {
-        return view('admin.project.create');
+    Route::group(['prefix' => 'project'], function() {
+        
+        Route::get('/', [ProjectController::class, 'index'])->name('project.index');
+        Route::get('/create', function () {
+            return view('admin.project.create');
+        });
+        Route::post('/create', [ProjectController::class, 'create'])->name('project.create');
+        Route::get('/{project}', [ProjectController::class, 'show'])->name('project.show');
+        Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('project.edit');
+        Route::put('/{project}', [ProjectController::class, 'update'])->name('project.update');
+        Route::delete('/{project}', [ProjectController::class, 'destroy'])->name('project.destroy');
+
     });
-    Route::post('/project/create', [\App\Http\Controllers\ProjectController::class, 'create'])->name('project.create');
-    Route::get('/project/{project}', [\App\Http\Controllers\ProjectController::class, 'show'])->name('project.show');
-    Route::get('/project/{project}/edit', [\App\Http\Controllers\ProjectController::class, 'edit'])->name('project.edit');
-    Route::put('/project/{project}', [\App\Http\Controllers\ProjectController::class, 'update'])->name('project.update');
-    Route::delete('/project/{project}', [App\Http\Controllers\ProjectController::class, 'destroy'])->name('project.destroy');
+    
 });
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

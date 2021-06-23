@@ -8,15 +8,10 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
     public function index()
     {
         $projects = Project::orderBy('id', 'desc')->paginate(10);
-        return view('admin.project.index', ['projects' => $projects]) ;
+        return view('admin.project.index', compact('projects')) ;
     }
 
     public function create(Request $request)
@@ -42,12 +37,12 @@ class ProjectController extends Controller
 
     public function show(Project $project)
     {
-        return view('admin.project.show', ['project' => $project]);
+        return view('admin.project.show', compact('project'));
     }
 
     public function edit(Project $project)
     {
-        return view('admin.project.edit', ['project' => $project]);
+        return view('admin.project.edit', compact('project'));
     }
 
     public function update(Request $request, Project $project)
@@ -74,7 +69,7 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         $project->delete();
-        return back()->with('status', 'Proyecto eliminado con éxito');
+        return back()->with('status-error', 'Proyecto eliminado con éxito');
     }
 
 }
