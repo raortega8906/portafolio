@@ -155,7 +155,7 @@
                 <div class="col-md-4">
                     <h4 class="media-heading">{{ $project->title }}</h4>
                     <a href="{{ route('portafolio.show', $project) }}">
-                        <img src="/images/{{ $project->image }}" class="img-responsive">
+                        <img src="/images/{{ $project->image }}" class="img-fluid img-thumbnail rounded-circle">
                     </a>
                     <br>
                     <br>
