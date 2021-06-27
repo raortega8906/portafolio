@@ -42,10 +42,11 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::group(['prefix' => 'project'], function() {
         
-        Route::get('/', [ProjectController::class, 'index'])->name('project.index');
         Route::get('/create', function () {
             return view('admin.project.create');
         });
+
+        Route::get('/', [ProjectController::class, 'index'])->name('project.index');
         Route::post('/create', [ProjectController::class, 'create'])->name('project.create');
         Route::get('/{project}', [ProjectController::class, 'show'])->name('project.show');
         Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('project.edit');
