@@ -205,7 +205,7 @@
                     <br>
                     <ul class="list-inline why-me">
                         <li>
-                            <h4>Lenguajes de Programación</h4>
+                            <h4>Lenguajes</h4>
                             <ul>
                                 <li>HTML</li>
                                 <li>CSS</li>
