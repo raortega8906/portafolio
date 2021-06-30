@@ -26,12 +26,13 @@ Route::get('/admin', function () {
 });
 
 // Ruta para quitar el Register en produccion... Deshabilitarla en desarrollo
-Route::get('/register', function () {
-    return view('auth.login');
-});
+// Route::get('/register', function () {
+//     return view('auth.login');
+// });
 
 // Ruta principal
 Route::get('/', [PortafolioController::class, 'index'])->name('portafolio.index');
+
 Route::get('/work/{project}', [PortafolioController::class, 'show'])->name('portafolio.show');
 
 // Ruta envio mails
