@@ -107,7 +107,7 @@
                     <i class="fa fa-gears"></i>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Experiencia Laboral</h4>
+                    <h4 class="media-heading">Experiencia Laboral España</h4>
                     <p>
                         Ceifor Estudios®: Empresa consultora. Desarrollo de tareas para una
                         plataforma de fichajes con Laravel 6, PHP, HTML, CSS3, MySQL y Boopstrap 3.
