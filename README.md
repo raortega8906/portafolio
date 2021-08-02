@@ -4,7 +4,7 @@
 
 ---
 
-# Desarrollado en Laravel 8.12 + Plantilla AdminLTE y Awesomess
+# Desarrollado en Laravel 8.12 + Plantilla AdminLTE y Awesomess.
 
 ---
 
