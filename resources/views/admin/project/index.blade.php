@@ -22,16 +22,17 @@
         </div>
         <!-- /.content-header -->
 
-        <a class="btn btn-success btn-sm mb-3 ml-3" href="{{ url('/project/create') }}">
-            <i class="fas fa-user-alt"></i>
+        <a class="btn btn-success btn-sm mb-3 ml-3" href="{{ route('project.create') }}">
+            <i class="fas fa-folder"></i>
             Crear
         </a>
 
-        @include('admin.partials.session-flash-status')
-
-        <!-- Main content -->
+    <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
+
+                @include('admin.partials.session-flash-status')
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card card-primary">
@@ -39,53 +40,55 @@
                                 <h3 class="card-title">Proyectos</h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                        data-toggle="tooltip" title="Collapse">
+                                            data-toggle="tooltip" title="Collapse">
                                         <i class="fas fa-minus"></i></button>
                                     <button type="button" class="btn btn-tool" data-card-widget="remove"
-                                        data-toggle="tooltip" title="Remove">
+                                            data-toggle="tooltip" title="Remove">
                                         <i class="fas fa-times"></i></button>
                                 </div>
                             </div>
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-striped table-valign-middle">
                                     <thead>
-                                        <tr>
-                                            <th>Titulo</th>
-                                            <th>Url</th>
-                                            <th>Imagen</th>
-                                            <th>Contenido</th>
-                                            <th></th>
-                                        </tr>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Titulo</th>
+                                        <th>Url</th>
+                                        <th></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($projects as $project)
-                                            <tr>
-                                                <td>{{ $project->title }}</td>
-                                                <td>{{ $project->url_clean }}</td>
-                                                <td><img src="/images/{{ $project->image }}" width="150" /></td>
-                                                <td>{{ $project->content }}</td>
-                                                <td class="float-right">
-                                                    <div class="d-flex">
-                                                        <a class="btn btn-primary btn-sm mx-1"
-                                                            href="{{ route('project.show', $project) }}">
-                                                            <i class="fas fa-folder"></i>
-                                                            Ver
-                                                        </a>
-                                                        <a class="btn btn-info btn-sm mx-1"
-                                                            href="{{ route('project.edit', $project) }}">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                            Editar
-                                                        </a>
-                                                        <button data-toggle="modal" data-target="#deleteModal"
-                                                            data-id="{{ $project->id }}" class="btn btn-danger btn-sm mx-1">
-                                                            <i class="fas fa-trash"></i>
-                                                            Borrar
-                                                        </button>
-                                                    </div>
-
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                    @forelse ($projects as $project)
+                                        <tr>
+                                            <td><img src="/images/{{ $project->image }}" width="150"/></td>
+                                            <td>{{ $project->title }}</td>
+                                            <td>{{ $project->url_clean }}</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary btn-sm mx-1"
+                                                       href="{{ route('project.show', $project) }}">
+                                                        <i class="fas fa-folder"></i>
+                                                        Ver
+                                                    </a>
+                                                    <a class="btn btn-info btn-sm mx-1"
+                                                       href="{{ route('project.edit', $project) }}">
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                        Editar
+                                                    </a>
+                                                    <button data-toggle="modal" data-target="#deleteModal"
+                                                            data-id="{{ $project->id }}"
+                                                            class="btn btn-danger btn-sm mx-1">
+                                                        <i class="fas fa-trash"></i>
+                                                        Borrar
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="2">No hay proyectos registrados aún</td>
+                                        </tr>
+                                    @endforelse
                                     </tbody>
                                 </table>
                             </div>
@@ -94,7 +97,7 @@
                         {{ $projects->links() }}
 
                         <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -111,7 +114,7 @@
                                             Cerrar
                                         </button>
                                         <form id="formDelete" data-action="{{ route('project.destroy', 0) }}"
-                                            method="POST">
+                                              method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="btn btn-danger btn-sm">
@@ -137,8 +140,8 @@
     <!-- /.content-wrapper -->
 
     <script>
-        window.onload = function() {
-            $('#deleteModal').on('show.bs.modal', function(event) {
+        window.onload = function () {
+            $('#deleteModal').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget) // Button that triggered the modal
                 var id = button.data('id') // Extract info from data-* attributes
                 // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).

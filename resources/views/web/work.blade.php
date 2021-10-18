@@ -111,11 +111,11 @@
 <nav id="tf-footer">
     <div class="container">
         <div class="pull-left">
-            <p>© {{date('Y')}} Copyright: <a href="#">Rafael A. Ortega</a></p>
+            <p>© {{date('Y')}}: <a href="#">Rafael A. Ortega</a></p>
         </div>
         <div class="pull-right">
             <ul class="social-media list-inline">
-                <li><a href="https://www.google.es/"><span class="fa fa-google"></span></a></li>
+                <li><a href="https://twitter.com/raortega8906"><span class="fa fa-twitter"></span></a></li>
                 <li>
                    <a href="https://www.instagram.com/rafa_ortega89/"><span class="fa fa-instagram"></span></a>
                 </li>

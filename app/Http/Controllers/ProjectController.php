@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
-use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
@@ -14,22 +15,22 @@ class ProjectController extends Controller
         return view('admin.project.index', compact('projects')) ;
     }
 
-    public function create(Request $request)
+    public function create()
+    {
+        return view('admin.project.create');
+    }
+
+    public function store(StoreProjectRequest $request)
     {
         if($request->hasFile('image'))
         {
-            $validateData = [
-                'title' => $request->input('title'),
-                'url_clean' => $request->input('url_clean'),
-                'image' => $request->file('image'),
-                'content' => $request->input('content')
-            ];
+            $validateData = $request->validated();
             $destinationPath = 'images';
-            $file = $request->file('image');
+            $file = $validateData['image'];
             $file_name = $file->getClientOriginalName();
             $file->move($destinationPath , $file_name);
             $validateData['image'] = $file_name;
-            Project::create($validateData);
+            auth()->user()->projects()->create($validateData);
             return back()->with('status', 'Proyecto creado con éxito');
         }
         return back()->with('status-error', 'Faltan campos por llenar');
@@ -45,18 +46,13 @@ class ProjectController extends Controller
         return view('admin.project.edit', compact('project'));
     }
 
-    public function update(Request $request, Project $project)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
         if($request->hasFile('image'))
         {
-            $validateData = [
-                'title' => $request->input('title'),
-                'url_clean' => $request->input('url_clean'),
-                'image' => $request->file('image'),
-                'content' => $request->input('content')
-            ];
+            $validateData = $request->validated();
             $destinationPath = 'images';
-            $file = $request->file('image');
+            $file = $validateData['image'];
             $file_name = $file->getClientOriginalName();
             $file->move($destinationPath , $file_name);
             $validateData['image'] = $file_name;

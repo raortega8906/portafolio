@@ -87,21 +87,18 @@
     <div class="container">
 
         <div class="col-md-4">
-
             <div class="media">
                 <div class="media-left media-middle">
-                    <i class="fa fa-motorcycle"></i>
+                    <i class="fa fa-gears"></i>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Desarrollado Web</h4>
+                    <h4 class="media-heading">Desarrollador Web</h4>
                     <p>Desarrollo y mantenimiento de sitios y aplicaciones web.</p>
                 </div>
             </div>
-
         </div>
 
         <div class="col-md-4">
-
             <div class="media">
                 <div class="media-left media-middle">
                     <i class="fa fa-gears"></i>
@@ -118,24 +115,19 @@
                     </p>
                 </div>
             </div>
-
         </div>
 
         <div class="col-md-4">
-
             <div class="media">
                 <div class="media-left media-middle">
-                    <i class="fa fa-heartbeat"></i>
+                    <i class="fa fa-gears"></i>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Agile</h4>
-                    <p>Agiles es mucho más que una metodología para el desarrollo de proyectos que precisan de rapidez y
-                        flexibilidad, es una filosofía que supone una forma distinta de trabajar y de organizarse.
-                        De tal forma que cada proyecto se 'trocea' en pequeñas partes que tienen que completarse y
-                        entregarse en pocas semanas.</p>
+                    <h4 class="media-heading">Formación Profesional</h4>
+                    <p>Ingeniero Informático con mas de un año de experiencia en el desarrollo web back-end con PHP,
+                        Laravel y MySQL.</p>
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -183,9 +175,9 @@
                         PHP con su framework Laravel.
                     </p>
                     <p>
-                        A lo largo de mi formación he potenciado la adaptabilidad a las necesidades de la empresa, 
-                        así como el espíritu de trabajo en equipo e implicación en las tareas. Estas capacidades hacen 
-                        considerarme un candidato en favor de la empresa, ofreciendo mi crecimiento profesional 
+                        A lo largo de mi formación he potenciado la adaptabilidad a las necesidades de la empresa,
+                        así como el espíritu de trabajo en equipo e implicación en las tareas. Estas capacidades hacen
+                        considerarme un candidato en favor de la empresa, ofreciendo mi crecimiento profesional
                         y el aprendizaje diario en beneficio de su mercado.
                     </p>
                     <br>
@@ -217,8 +209,8 @@
                         <li>
                             <h4>Frameworks</h4>
                             <ul>
-                                <li>Laravel</li>
                                 <li>Bootstrap</li>
+                                <li>Laravel</li>
                             </ul>
                         </li>
                         <br>
@@ -256,41 +248,40 @@
         </div>
 
         <div class="space"></div>
-
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <form id="contact" action="{{ route('mail') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Entre su nombre">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Entre su email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="4" name="message" id="message" placeholder="Mensaje"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary my-btn dark">Enviar</button>
-                    </form>
-                </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form id="contact" action="{{ route('mail') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Entre su nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Entre su email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" name="message" id="message"
+                                  placeholder="Mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-btn dark">Enviar</button>
+                </form>
             </div>
-
+        </div>
     </div>
 </div>
 
 <nav id="tf-footer">
     <div class="container">
         <div class="pull-left">
-            <p>© {{date('Y')}} Copyright: <a href="#">Rafael A. Ortega</a></p>
+            <p>© {{date('Y')}}: <a href="#">Rafael A. Ortega</a></p>
         </div>
         <div class="pull-right">
             <ul class="social-media list-inline">
-                <li><a href="https://www.google.es/"><span class="fa fa-google"></span></a></li>
+                <li><a href="https://twitter.com/raortega8906"><span class="fa fa-twitter"></span></a></li>
                 <li>
-                   <a href="https://www.instagram.com/rafa_ortega89/"><span class="fa fa-instagram"></span></a>
+                    <a href="https://www.instagram.com/rafa_ortega89/"><span class="fa fa-instagram"></span></a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/rafael-a-ortega-valderrama-ab7a1aa8/">

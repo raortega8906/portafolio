@@ -18,17 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 // Ruta Login
 Route::get('/admin', function () {
     return view('auth.login');
 });
 
-// Ruta para quitar el Register en produccion... Deshabilitarla en desarrollo
-// Route::get('/register', function () {
-//     return view('auth.login');
-// });
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Ruta principal
 Route::get('/', [PortafolioController::class, 'index'])->name('portafolio.index');
@@ -42,18 +37,15 @@ Route::post('/mail', [MailController::class, 'getMail'])->name('mail');
 Route::group(['middleware' => 'auth'], function() {
 
     Route::group(['prefix' => 'project'], function() {
-        
-        Route::get('/create', function () {
-            return view('admin.project.create');
-        });
 
         Route::get('/', [ProjectController::class, 'index'])->name('project.index');
-        Route::post('/create', [ProjectController::class, 'create'])->name('project.create');
+        Route::post('/', [ProjectController::class, 'store'])->name('project.store');
+        Route::get('/create', [ProjectController::class, 'create'])->name('project.create');
         Route::get('/{project}', [ProjectController::class, 'show'])->name('project.show');
-        Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('project.edit');
         Route::put('/{project}', [ProjectController::class, 'update'])->name('project.update');
         Route::delete('/{project}', [ProjectController::class, 'destroy'])->name('project.destroy');
+        Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('project.edit');
 
     });
-    
+
 });
