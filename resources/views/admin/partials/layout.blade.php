@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-{{--  
+{{--
 This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.  
+scratch. This page gets rid of all links and provides the needed markup only.
 --}}
 <html lang="en">
 <head>
@@ -116,10 +116,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Google -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://www.google.es/"
+                    href="https://twitter.com/raortega8906"
                     role="button"
                     data-mdb-ripple-color="dark"
-                ><i class="fab fa-google"></i
+                ><i class="fab fa-twitter"></i
                     ></a>
 
                 <!-- Instagram -->
@@ -154,7 +154,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Copyright -->
         <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © {{date('Y')}} Copyright:
+            © {{date('Y')}}:
             <a class="text-dark" href="https://rafaelortegaweb.herokuapp.com/">Rafael A. Ortega</a>
         </div>
         <!-- Copyright -->
