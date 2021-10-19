@@ -36,7 +36,7 @@ Route::post('/mail', [MailController::class, 'getMail'])->name('mail');
 // Ruta de administracion de proyectos
 Route::group(['middleware' => 'auth'], function() {
 
-    Route::group(['prefix' => 'project'], function() {
+    Route::group(['prefix' => 'project', 'middleware' => 'is_admin'], function() {
 
         Route::get('/', [ProjectController::class, 'index'])->name('project.index');
         Route::post('/', [ProjectController::class, 'store'])->name('project.store');
