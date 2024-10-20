@@ -11,8 +11,8 @@ Fue el primer portafolio que creé, lo interesante de este proyecto es el panel 
 Para ejecutar este proyecto es necesario que tenga instalado PHP, MySQL, Apache o Nginx. Para mas información, consulte las recomendaciones de [Laravel](https://laravel.com/docs/8.x).
 
 ### Pasos:
-1. Clonar el repositorio : `git clone https://github.com/raortega8906/Laravel-Eloquent-Relationship.git`
-2. `$ cd Laravel-Eloquent-Relationship`
+1. Clonar el repositorio : `git clone https://github.com/raortega8906/portafolio.git`
+2. `$ cd portafolio`
 3. `$ composer install`
 4. `$ cp .env.example .env`
 5. `$ php artisan key:generate`
