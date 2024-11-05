@@ -1,32 +1,32 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-# Portafolio
+# Portfolio
 
-Fue el primer portafolio que creé, lo interesante de este proyecto es el panel de administración desarrollado en laravel para la gestión de proyectos con un CRUD completo, del cual se alimentará la web para mostrarlos.
+This was the first portfolio I created, and the interesting aspect of this project is the admin panel developed in Laravel for managing projects with a full CRUD, which feeds data to the website for display.
 
-### Objetivos
-* El objetivo pricipal es utilizar Laravel para la creación de un panel de administración para la gestión de proyectos.
+### Objectives
+* The main objective is to use Laravel to create an admin panel for managing projects.
 
-## Como instalar
-Para ejecutar este proyecto es necesario que tenga instalado PHP, MySQL, Apache o Nginx. Para mas información, consulte las recomendaciones de [Laravel](https://laravel.com/docs/8.x).
+## Installation Instructions
+To run this project, you need PHP, MySQL, Apache, or Nginx installed. For more information, refer to [Laravel’s recommendations](https://laravel.com/docs/8.x).
 
-### Pasos:
-1. Clonar el repositorio : `git clone https://github.com/raortega8906/portafolio.git`
+### Steps:
+1. Clone the repository: `git clone https://github.com/raortega8906/portafolio.git`
 2. `$ cd portafolio`
 3. `$ composer install`
 4. `$ cp .env.example .env`
 5. `$ php artisan key:generate`
-6. Crear BD en **MySQL** o **SQLite**
-7. Credenciales de BD en el archivo `.env`
+6. Create a database in **MySQL** or **SQLite**
+7. Add database credentials in the `.env` file
 8. `$ php artisan migrate --seed`
 9. `$ php artisan serve`
-10. Iniciar sesión con:
-    - email : `admin@admin.com`
-    - password : `password`
-11. El panel estará en la ruta: `/admin`
+10. Log in with:
+    - email: `admin@admin.com`
+    - password: `password`
+11. The admin panel will be accessible at the route: `/admin`
 
-## Licencia
-El proyecto es de código abierto.
+## License
+This project is open source.
 
-## Próximos pasos
-Ahora puede comenzar a usar Portafolio libremente.
+## Next Steps
+You are now free to start using Portfolio.
